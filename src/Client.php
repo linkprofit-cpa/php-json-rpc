@@ -54,7 +54,7 @@ class Client
      * @return self
      * Returns the object handle, so you can chain method calls if you like
      */
-    public function query($id, $method, array $arguments)
+    public function query($id, $method, array $arguments = null)
     {
         $message = array(
             'jsonrpc' => self::VERSION,
@@ -77,7 +77,7 @@ class Client
      * @return self
      * Returns the object handle, so you can chain method calls if you like
      */
-    public function notify($method, array $arguments)
+    public function notify($method, array $arguments = null)
     {
         $message = array(
             'jsonrpc' => self::VERSION,
